@@ -1,0 +1,12 @@
+services:
+  jupyter:
+    container_name: jupyter
+    build: jupyter
+    expose:
+      - 8888
+  haproxy:
+    container_name: haproxy
+    build: haproxy
+    ports:
+      - 9090:80
+      - 8404:8404
